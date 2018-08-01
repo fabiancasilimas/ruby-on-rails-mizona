@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :contacts, only: [:new, :create]
+  match '/contacts',	to: 'contacts#new',	via: 'get'	
+  resources :contacts,	only: [:new, :create]
   #resources :contacts, except: [:new, :create]
   #resources :contacts
   #get 'contacts/new'

@@ -13,13 +13,6 @@
  *= require_tree .
  *= require_self
  */
-.container-input{
-	padding-top: 10px;
-}
-.hidden-field{
-	visibility: hidden;
-}
-.container-info{
-	margin-top: 35px;
-	margin-left: 35px;
+.hidden{
+	display: none;
 }
