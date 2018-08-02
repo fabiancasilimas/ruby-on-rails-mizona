@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
 	  	@contact = Contact.new(params[:contact])
 	  	@contact.request = request
 	  	if @contact.deliver
-			flash.now[:notice] = 'Gracias por su mensaje. ¡Estaremos contactándonos pronto con usted!'
+			flash.now[:notice] = 'Su mensaje se envió correctamente.'
 
 	  	else
 	  		flash.now[:error] = 'Hay errores de validación en el formulario. Por favor, corríjalos y vuelva a intentarlo.'
