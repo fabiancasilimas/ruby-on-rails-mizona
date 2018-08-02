@@ -23,7 +23,9 @@
           	<% end %>
           	
            		<%= link_to 'Posts', posts_path, :class => 'btn btn-danger my-2' %>
-           
           </p>
+          <% if current_user && current_user.admin %>
+        <p>Hola Admin!</p>
+        <% end %>
         </div>
 </div>
