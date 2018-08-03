@@ -1,3 +1,4 @@
+<body class="bg-light">
 
 <h2 class="mt-5">Contáctenos</h2>
 	<p>Comparta con nosotros sus sugerencias, felicitaciones, reclamos o denuncias.</p>
@@ -13,14 +14,12 @@
 		    </div>
 		<% end %>
 
-		<%= form_for @contact , :html => {:class => 'form-horizontal' } do |f| %>
-			<div class="form-group">
-				<%= f.label :name, 'Nombre y Apellidos' %> <br>
-				<%= f.text_field :name, required: true, :class => 'form-control', :placeholder => 'Nombre y Apellidos' %>
+		<%= form_for @contact , :html => {:class => 'form-signin' } do |f| %>
+			<div>
+				<%= f.text_field :name, required: true, :class => 'form-control', :class => 'form-control form-signin-pass', :placeholder => 'Nombre y Apellidos' %>
 			</div>
 			<div class="form-group">
-				<%= f.label :email, 'Correo Electrónico' %> <br>
-				<%= f.email_field :email, required: true, :class => 'form-control', :placeholder => 'ejemplo@dominio.com' %>
+				<%= f.email_field :email, required: true, :class => 'form-control form-signin-email', :placeholder => 'Correo electrónico' %>
 			</div>
 			<div class="form-group">
 				<%= f.label :message, 'Mensaje' %> <br>
@@ -35,3 +34,4 @@
 			</div>
 
 		<% end %>
+</body>

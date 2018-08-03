@@ -40,9 +40,14 @@
             <div class="col-sm-4 offset-md-1 py-4">
               <!-- <h4 class="text-white">Contact</h4> -->
               <ul class="navbar-nav mr-auto">
-                <li><a href="#" class="text-white">Ingresar</a></li>
-                <li><a href="#" class="text-muted">Registrarse</a></li>
-                <li><a href="#" class="text-muted">Denunciar</a></li>
+                <li>
+                  <%= link_to 'Iniciar sesión', new_user_session_path, :class => 'text-white' %>
+                <li>
+                  <%= link_to 'Registrarse', new_user_registration_path, :class => 'text-white' %>
+                  </li>
+                <li>
+                  <%= link_to 'Denuncia', posts_path, :class => 'text-white' %>
+                </li>
                 <li><a href="#" class="text-muted">Mapa</a></li>
                 <li><a href="/contacts" class="text-white">Contáctenos</a></li>
               </ul>
@@ -52,7 +57,7 @@
       </div>
       <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container d-flex justify-content-between">
-          <a href="./" class="navbar-brand d-flex align-items-center">
+          <a href="/web/index" class="navbar-brand d-flex align-items-center">
            <i class="fas fa-map-marked-alt">&nbsp;</i>
             <strong>mizona Demo</strong>
           </a>

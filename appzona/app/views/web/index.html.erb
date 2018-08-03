@@ -5,16 +5,16 @@
 	
 	 <div class="container">
           <h1 class="jumbotron-heading">Seguridad Ciudadana</h1>
-          <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium mollis sapien, id efficitur lorem. Integer viverra dignissim</p>
+          <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          Mauris pretium mollis sapien, id efficitur lorem. Integer viverra dignissim</p>
           <p>
           	<% if current_user %>
-	          	<%= link_to 'Cerrar sesion', destroy_user_session_path, method: :delete, :class => 'btn btn-secondary my-2' %>
+	          	<%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, :class => 'btn btn-secondary my-2' %>
           	<% else	%>
-	          	<%= link_to 'Ingresar', new_user_session_path, :class => 'btn btn-primary my-2' %>
+	          	<%= link_to 'Iniciar sesión', new_user_session_path, :class => 'btn btn-primary my-2' %>
 	           	<%= link_to 'Registrarse', new_user_registration_path, :class => 'btn btn-secondary my-2' %>
           	<% end %>
-          	
-           		<%= link_to 'Denuncias', posts_path, :class => 'btn btn-danger my-2' %>
+           		<%= link_to 'Denuncia', posts_path, :class => 'btn btn-outline-danger my-2' %>
           </p>
          
         </div>
