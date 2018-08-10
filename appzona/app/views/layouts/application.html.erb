@@ -20,6 +20,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
+    <title>Mi Zona</title>
 
   </head>
 
@@ -29,24 +30,38 @@
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
           <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h5 class="text-white">
+            <div class="col-sm-8 col-md-7 mt-4">
                 <% if current_user %>
-                  Hola, <%= current_user.username %>.
+                <h4 class="text-white">
+                 <span class="badge badge-light">
+                  Hola,&nbsp;<%= current_user.firstname %>.
+                  </span>
                 <% end %>
-              </h5>
-              <p class="text-muted">Mi Zona es una aplicación (PWA) que permite crear crear denuncias. Se recomienda el uso de esta aplicación de forma responsable. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium mollis sapien, id efficitur lorem. Integer viverra dignissim.</p>
+              </h4>
+              <% if current_user %>
+              <% else %>
+              <p class="text-muted">Mi Zona es una aplicación que permite crear crear denuncias. Se recomienda el uso de esta aplicación de forma responsable.</p>
+              <% end %>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
               <!-- <h4 class="text-white">Contact</h4> -->
               <ul class="navbar-nav mr-auto">
-                <li>
+
+            <% if current_user %>
+              <li>
+              <%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, :class => 'text-white' %>
+              </li>
+            <% else %>
+             <li>
                   <%= link_to 'Iniciar sesión', new_user_session_path, :class => 'text-white' %>
-                <li>
+                  </li>
+              <li>
                   <%= link_to 'Registrarse', new_user_registration_path, :class => 'text-white' %>
                   </li>
+            <% end %>
+
                 <li>
-                  <%= link_to 'Denuncia', posts_path, :class => 'text-white' %>
+                  <%= link_to 'Denuncia', new_post_path, :class => 'text-white' %>
                 </li>
                 <li><a href="#" class="text-muted">Mapa</a></li>
                 <li><a href="/contacts" class="text-white">Contáctenos</a></li>

@@ -1,24 +1,38 @@
 <!-- <p id="notice"><%= notice %></p> -->
-
+<div class="shadow p-3 mb-5 bg-white rounded">
 <p>
-  <strong>Title:</strong>
+  <strong>Tipo de delito:</strong>
   <%= @post.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>Barrio:</strong>
   <%= @post.body %>
 </p>
 
 <p>
-  <strong>Text:</strong>
+  <strong>Informe los hechos:</strong>
   <%= @post.text %>
 </p>
-
+ <% if current_user && current_user.admin %>
 <p>
-  <strong>User:</strong>
-  <%= @post.user.username %>
+  <strong>Denunciante:</strong>
+  <%= @post.user.firstname %>&nbsp;<%= @post.user.lastname %>
+</p> 
+<p>
+  <strong>Correo:</strong>
+  <%= @post.user.email %>
 </p>
+<% end %>
+</div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="text-center">
+	<%= link_to 'Nueva Denuncia', new_post_path, :class => 'btn btn-primary' %>
+</div>
+
+<% if current_user && current_user.admin %>
+<div class="text-center mt-2">
+<%= link_to 'Editar', edit_post_path(@post) %> |
+<%= link_to 'Mostrar denuncias', posts_path %>
+</div>
+<% end %>

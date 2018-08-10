@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+   <div class="form-group">
+    <%= form.label :title, 'Tipo de delito' %> <br>
+    <%= form.text_field :title, autofocus: true, required: true, :class => 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_field :body %>
+    <%= form.label :body, 'Barrio' %>
+    <%= form.text_field :body, required: true, :class => 'form-control', :row => '3' %>
   </div>
 
   <div class="field">
-    <%= form.label :text %>
-    <%= form.text_field :text %>
+    <%= form.label :text, 'Informe los hechos' %>
+    <%= form.text_area :text, required: true, :class => 'form-control', :row => '3' %>
   </div>
 
   <!-- <div class="field">
@@ -31,7 +31,8 @@
     <%= form.text_field :user_id %>
   </div> -->
 
-  <div class="actions">
-    <%= form.submit %>
+   <div class="text-center mt-3">
+    <%= form.submit 'Denunciar', :class => 'btn btn-primary' %>
   </div>
 <% end %>
+
