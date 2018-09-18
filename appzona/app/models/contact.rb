@@ -10,7 +10,7 @@ class Contact < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      :subject => "Soporte de la aplicación",
+      :subject => "Soporte, app Mi Zona",
       :to => "soporteappmizona@gmail.com",
       :from => %("#{name}" <#{email}>)
     }
