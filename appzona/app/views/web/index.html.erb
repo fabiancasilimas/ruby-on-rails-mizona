@@ -1,12 +1,12 @@
 <!--<% if current_user && current_user.admin %>Hola, <%= current_user.username %>.<% end %>-->
 <div class="text-center">
 	
-	<img src="/assets/mizona.gif" class="img-fluid" style="margin-top: 35px;">
+	<img src="/images/mizona.gif" class="img-fluid" style="margin-top: 35px;">
 	
 	 <div class="container">
           <h1 class="jumbotron-heading">Seguridad Ciudadana</h1>
-          <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-          Mauris pretium mollis sapien, id efficitur lorem. Integer viverra dignissim.</p>
+		  <p class="lead text-muted">Te permite crear denuncias para que Todos podamos contribuir y tener una cuidad más segura. <br />
+		   Bogotá Mi Casa, Bogotá Mi Zona.</p>
           <p>
           	<% if current_user %>
 	          	<%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, :class => 'btn btn-secondary my-2' %>
