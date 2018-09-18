@@ -12,8 +12,6 @@ gem 'pg'
 gem 'mail_form'
 # Devise is a flexible authentication solution for Rails based on Warden.
 gem 'devise'
-# Rack::Cors provides support for Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
-gem 'rack-cors', require: 'rack/cors'
 # Rack::Attack Rack middleware for blocking & throttling abusive requests
 gem 'rack-attack'
 # Use Puma as the app server
