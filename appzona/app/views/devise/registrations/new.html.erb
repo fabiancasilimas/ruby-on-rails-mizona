@@ -18,7 +18,7 @@
   </div>
   <div class="form-row">
     <div class="form-group col-md-4">
-      <%= f.select(:idtype, [['Tipo de documento', ''],['Cédula de Ciudadanía', 'CC'],['Cédula de Extranjería', 'CE'], ['Pasaporte','PS'],['Registro Civil', 'RC'],['Tarjeta de identidad','TC']], {}, {:class => 'custom-select mr-sm-2'}) %>
+      <%= f.select(:idtype, [['Tipo de documento', ''],['Cédula de Ciudadanía', 'CC'],['Cédula de Extranjería', 'CE'], ['Pasaporte','PS'], ['Registro Civil', 'RC'], ['Tarjeta de identidad','TC']], {}, {:class => 'custom-select mr-sm-2'}) %>
     </div>
     <div class="form-group col-md-8">
      <%= f.text_field :idnumber, autofocus: true, :class => 'form-control', :placeholder => 'Número de identificación' %>
