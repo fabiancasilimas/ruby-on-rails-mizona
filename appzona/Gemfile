@@ -14,6 +14,8 @@ gem 'mail_form'
 gem 'devise'
 # Rack::Attack Rack middleware for blocking & throttling abusive requests
 gem 'rack-attack'
+# Rack::Cors provides support for Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
+gem 'rack-cors', require: 'rack/cors'
 #dotenv Shim to load environment variables from .env into ENV in development
 gem 'dotenv-rails', groups: [:development, :test]
 # Use Puma as the app server
